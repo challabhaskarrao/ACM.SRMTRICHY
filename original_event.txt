@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event | SRMIST Trichy ACM Student Chapter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+        :root {
+            --srm-blue: #003d7d;
+            --srm-gold: #b3a369;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+        }
+        .bg-srm-blue { background-color: var(--srm-blue); }
+        .text-srm-gold { color: var(--srm-gold); }
+        .btn-primary {
+            background-color: var(--srm-blue);
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 14px 0 rgba(0, 61, 125, 0.39);
+        }
+        .btn-primary:hover {
+            background-color: #002a54;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- Header -->
+        <header id="header" class="bg-white fixed top-0 left-0 right-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Placeholder for Logo -->
+                <a href="#home">
+                    <img src="acm1.png" alt="ACM Logo" class="h-10 w-auto mr-3">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-xs font-medium text-gray-600 hover:text-srm-blue transition-colors">Back</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="#" class="join-trigger btn-primary text-xs font-semibold px-5 py-2 rounded-full transition-colors">Join Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="text-srm-blue"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="index.html" class="block py-3 px-6 text-xs text-gray-700 hover:bg-gray-50">Home</a>
+            
+            <div class="p-4">
+                <a href="#" class="join-trigger btn-primary w-full text-center text-xs font-semibold px-5 py-2 rounded-full">Join Us</a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+        <!-- Event Section -->
+        <section id="event1" class="py-12">
+            <div class="container mx-auto px-6">
+                <h1 class="text-3xl md:text-4xl font-bold text-srm-blue text-center mb-12">Future Makers Initiative</h1>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg grid md:grid-cols-5 gap-8 items-center">
+                    <!-- Event Poster -->
+                    <div class="md:col-span-2">
+                        <video autoplay muted loop playsinline class="w-full rounded-lg shadow-2xl">
+    <source src="acm1[1].mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+                    </div>
+                    <!-- Event Description -->
+                    <div class="md:col-span-3">
+                        <h2 class="text-2xl md:text-3xl font-bold text-srm-blue mb-4">Lab visit for school students </h2>
+                        <div class="flex items-center text-sm text-text-secondary mb-6 space-x-6">
+                            <span class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2 text-srm-gold"></i>August 01, 2025</span>
+                            <span class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2 text-srm-gold"></i>02:00 PM - 5:00 PM</span>
+                        </div>
+                        <div class="text-sm text-text-secondary space-y-4 leading-relaxed">
+                            <p>We recently hosted an enriching lab visit for students from Alpha School, Tiruchirappalli. The students had the opportunity to explore our state-of-the-art facilities, including the AR/VR Lab Centre of Excellence, MAC Lab, MATLAB Lab, Biotech Lab, and Neuro Microbiology Lab. During the visit, they gained hands-on experience and insights into various scientific and technological applications. The event aimed to inspire and motivate young minds, providing them with a glimpse into the exciting world of science and technology. The visit was a resounding success, with students and faculty alike benefiting from the experience. We're proud to share our knowledge and facilities with the next generation of innovators and leaders !</p>
+                            <p></p>
+                            <h4 class="font-semibold text-srm-blue pt-2">Labs visited:</h4>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>AR VR Lab</li>
+                                <li>Centre of Intelligence</li>
+                                <li>MAC Lab</li>
+                                <li>Bio Tech Lab</li>
+                                <li>Microbiology Lab</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+                    <main class="pt-24 pb-16">
+        <!-- Event Section -->
+        <section id="event1" class="py-12">
+            <div class="container mx-auto px-6">
+                <h1 class="text-3xl md:text-4xl font-bold text-srm-blue text-center mb-12">The First Taste of DBMS- an introductory session</h1>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg grid md:grid-cols-5 gap-8 items-center">
+                    <!-- Event Poster -->
+                    <div class="md:col-span-2">
+                        <video autoplay muted loop playsinline class="w-full rounded-lg shadow-2xl">
+    <source src="videoevent1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+                    </div>
+                    <!-- Event Description -->
+                    <div class="md:col-span-3">
+                        <h2 class="text-2xl md:text-3xl font-bold text-srm-blue mb-4">The First Taste of DBMS- an introductory session </h2>
+                        <div class="flex items-center text-sm text-text-secondary mb-6 space-x-6">
+                            <span class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2 text-srm-gold"></i>March 24, 2025</span>
+                            <span class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2 text-srm-gold"></i>11:00 AM - 12:30 PM</span>
+                        </div>
+                        <div class="text-sm text-text-secondary space-y-4 leading-relaxed">
+                            <p>The ACM Student Chapter of SRMIST Tiruchirappalli hosted The First Taste of DBMS on March 24, 2025, offering a beginner-friendly introduction to Database Management Systems. The session covered DBMS architecture, data organization, database types, real-world applications, and basic SQL commands. Through relatable examples, interactive Q&A, and practical insights, participants gained a solid foundation to explore DBMS further for academic or project work. The event reflected ACMs commitment to promoting technical education, collaboration, and skill-building within the SRMIST community.</p>
+                            <p></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main class="pt-24 pb-16">
+        <!-- Event Section -->
+        <section id="kickoff" class="py-12">
+            <div class="container mx-auto px-6">
+                <h1 class="text-3xl md:text-4xl font-bold text-srm-blue text-center mb-12">Empowering Students Through ACM </h1>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg grid md:grid-cols-5 gap-8 items-center">
+                    <!-- Event Poster -->
+                    <div class="md:col-span-2">
+                        <img src="Empowering.jpg">
+                    </div>
+                    <!-- Event Description -->
+                    <div class="md:col-span-3">
+                        <h2 class="text-2xl md:text-3xl font-bold text-srm-blue mb-4">Explore, Engage, Excel</h2>
+                        <div class="flex items-center text-sm text-text-secondary mb-6 space-x-6">
+                            <span class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2 text-srm-gold"></i>August 05, 2025</span>
+                            <span class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2 text-srm-gold"></i>2:00 PM - 4:00 PM</span>
+                        </div>
+                        <div class="text-sm text-text-secondary space-y-4 leading-relaxed">
+                          
+                            <p>On 5 August 2025, the School of Computing, SRM Institute of Science and Technology, Tiruchirappalli, organized a seminar titled Empowering Students Through ACM Explore, Engage, Excel. Delivered by Dr. Maria DSouza Choudhary, Principal MTS at Oracle India and Executive Council Member of ACM India, the session highlighted ACMs resources, networking opportunities, and skill-building platforms, encouraging students to actively participate and leverage ACM membership for academic and professional advancement.</p>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <main class="pt-24 pb-16">
+        <!-- Event Section -->
+        <section id="kickoff" class="py-12">
+            <div class="container mx-auto px-6">
+                <h1 class="text-3xl md:text-4xl font-bold text-srm-blue text-center mb-12">Fiscal year 25-26 Kickoff </h1>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg grid md:grid-cols-5 gap-8 items-center">
+                    <!-- Event Poster -->
+                    <div class="md:col-span-2">
+                        <img src="kickoff.jpeg">
+                    </div>
+                    <!-- Event Description -->
+                    <div class="md:col-span-3">
+                        <h2 class="text-2xl md:text-3xl font-bold text-srm-blue mb-4">New Fiscal Year Kickoff</h2>
+                        <div class="flex items-center text-sm text-text-secondary mb-6 space-x-6">
+                            <span class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2 text-srm-gold"></i>August 04, 2025</span>
+                            <span class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2 text-srm-gold"></i>10:00 AM - 1:00 PM</span>
+                        </div>
+                        <div class="text-sm text-text-secondary space-y-4 leading-relaxed">
+                          
+                            <p>Kicking off the new fiscal year 2025-26 with a bang! ð???
+
+      Our SRMIST Tiruchirappalli ACM Student Chapter team came together for a strategy and planning meeting today to map out our goals and objectives for this year. ð??¡
+
+A huge thank you to our team members for their dedication and enthusiasm. We're looking forward to an amazing year ahead!</p>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+        <footer id="contact" class="bg-srm-blue text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left">
+                <!-- About -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">SRMIST Tiruchirappalli ACM</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        The official student chapter of the Association for Computing Machinery at SRM Institute of Science and Technology, Tiruchirappalli campus.
+                    </p>
+                </div>
+                
+                <!-- Contact Us -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">Contact Us</h3>
+                    <p class="text-xs text-gray-300">Have questions? Get in touch.</p>
+                    <a href="mailto:connect@srmtrichy.acm.org" class="text-xs inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        connect@srmtrichy.acm.org
+                    </a>
+                </div>
+                <!-- Social Media -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">Connect With Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.instagram.com/acmsrm?igsh=Mzh3eDB6MWtjM3Z1" class="text-gray-300 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://www.linkedin.com/company/srm-ist-acm-student-chapter/" class="text-gray-300 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <!--<a href="#" class="text-gray-300 hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800/50 mt-12 pt-6 text-center text-xs text-gray-400 space-y-2 md:flex md:justify-between md:items-center md:space-y-0">
+                <p>&copy; <span id="year"></span> SRMIST Tiruchirappalli ACM Student Chapter. All Rights Reserved.</p>
+                <p>Developed by <a href="https://www.linkedin.com/in/shaktivel-t-k-803a75335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-500 hover:text-blue-700 transition-colors">Shaktivel</a> and <a href="https://www.linkedin.com/in/jagankarthick?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-500 hover:text-blue-700 transition-colors">Jagan Karthick</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modals (reused from index.html for consistency) -->
+    <div id="join-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[100] flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-sm p-6 text-center relative">
+            <button class="modal-close-btn absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="modal-initial-view">
+                <h3 class="text-lg font-semibold text-srm-blue mb-4">Join Our Community</h3>
+                <p class="text-sm text-text-secondary mb-6">Are you a student of SRMIST Tiruchirappalli?</p>
+                <div class="flex justify-center gap-4">
+                    <button class="modal-yes-btn-join btn-primary text-sm font-semibold px-6 py-2 rounded-full">Yes</button>
+                    <button class="modal-no-btn btn-secondary text-sm font-semibold px-6 py-2 rounded-full">No</button>
+                </div>
+            </div>
+            <div class="modal-no-view hidden">
+                 <h3 class="text-lg font-semibold text-srm-blue mb-4">Contact Us</h3>
+                 <p class="text-sm text-text-secondary mb-4">For collaborations and inquiries, please reach out to our team via email.</p>
+                 <div class="bg-gray-100 p-3 rounded-lg border border-gray-200">
+                    <p class="text-sm font-semibold text-srm-blue">vicechair@srmtrichy.edu.in</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function setupModal(triggerSelector, modalId) {
+            const triggers = document.querySelectorAll(triggerSelector);
+            const modal = document.getElementById(modalId);
+            if (!triggers.length || !modal) return;
+
+            const closeBtns = modal.querySelectorAll('.modal-close-btn');
+            const yesBtnJoin = modal.querySelector('.modal-yes-btn-join');
+            const noBtns = modal.querySelectorAll('.modal-no-btn');
+            const initialView = modal.querySelector('.modal-initial-view');
+            const noView = modal.querySelector('.modal-no-view');
+
+            const showModal = () => {
+                initialView.classList.remove('hidden');
+                noView.classList.add('hidden');
+                modal.classList.remove('hidden');
+            };
+
+            const hideModal = () => modal.classList.add('hidden');
+
+            triggers.forEach(button => button.addEventListener('click', e => {
+                e.preventDefault();
+                showModal();
+            }));
+
+            closeBtns.forEach(btn => btn.addEventListener('click', hideModal));
+            modal.addEventListener('click', e => {
+                if (e.target === modal) hideModal();
+            });
+
+            noBtns.forEach(btn => btn.addEventListener('click', () => {
+                initialView.classList.add('hidden');
+                noView.classList.remove('hidden');
+            }));
+
+            if (yesBtnJoin) {
+                yesBtnJoin.addEventListener('click', () => {
+                    window.open('https://chat.whatsapp.com/your-community-link-here', '_blank');
+                    hideModal();
+                });
+            }
+        }
+
+        setupModal('.join-trigger', 'join-modal');
+    </script>
+</body>
+</html>

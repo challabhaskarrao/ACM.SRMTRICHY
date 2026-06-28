@@ -1,0 +1,43 @@
+.gradual-blur {
+  position: absolute;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.gradual-blur--top {
+  top: 0;
+}
+
+.gradual-blur--bottom {
+  bottom: 0;
+}
+
+.gradual-blur--left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: auto;
+}
+
+.gradual-blur--right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.gradual-blur__layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.gradual-blur--left .gradual-blur__layer,
+.gradual-blur--right .gradual-blur__layer {
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: auto;
+}

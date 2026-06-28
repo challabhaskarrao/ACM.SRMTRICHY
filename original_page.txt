@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRMIST Tiruchirappalli ACM Student Chapter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Clean white background */
+            color: #333;
+        }
+        /* Refined SRM-inspired color scheme for a luxury feel */
+        :root {
+            --srm-blue: #003d7d; /* A slightly more vibrant official blue */
+            --srm-gold: #b3a369; /* A softer, elegant gold */
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+        }
+        .bg-srm-blue { background-color: var(--srm-blue); }
+        .text-srm-gold { color: var(--srm-gold); }
+        .border-srm-gold { border-color: var(--srm-gold); }
+        .btn-primary {
+            background-color: var(--srm-blue);
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 14px 0 rgba(0, 61, 125, 0.39);
+        }
+        .btn-primary:hover {
+            background-color: #002a54;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--srm-blue);
+            border: 1px solid var(--srm-blue);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: var(--srm-blue);
+            color: white;
+        }
+        .section-title {
+            font-size: 1.4rem; /* Reduced font size */
+            font-weight: 600;
+            color: var(--srm-blue);
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px; /* Refined underline */
+            height: 2px;
+            background-color: var(--srm-gold);
+            border-radius: 2px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem; /* Slightly sharper radius */
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+        
+        /* Auto-scrolling carousel styles */
+        .scroller {
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+        .scroller-inner {
+            display: flex;
+            gap: 1.5rem; /* Space between items */
+            width: max-content;
+            animation: scroll 15s linear infinite;
+        }
+        @keyframes scroll {
+            to {
+                transform: translate(calc(-50% - 0.75rem)); /* Half of the container width plus half the gap */
+            }
+        }
+
+        /* Image Background Styles */
+        .hero-section {
+            background-image: url('bg.jpeg'); /* Make sure 'bg.jpg' is in the same folder */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 20, 40, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- Header -->
+    <header id="header" class="bg-white fixed top-0 left-0 right-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Placeholder for Logo -->
+                <a href="#home">
+                    <img src="acm1.png" alt="ACM Logo" class="h-10 w-auto mr-3">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="nav-link text-xs font-medium text-gray-600 hover:text-srm-blue transition-colors">Home</a>
+                <a href="#about" class="nav-link text-xs font-medium text-gray-600 hover:text-srm-blue transition-colors">About</a>
+                <a href="#gallery" class="nav-link text-xs font-medium text-gray-600 hover:text-srm-blue transition-colors">Gallery</a>
+                <a href="event.html" class="nav-link text-xs font-medium text-gray-600 hover:text-srm-blue transition-colors">Events</a>
+                <a href="#team" class="nav-link text-xs font-medium text-gray-600 hover:text-srm-blue transition-colors">Team</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="#" class="join-trigger btn-primary text-xs font-semibold px-5 py-2 rounded-full transition-colors">Join Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="text-srm-blue"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#home" class="block py-3 px-6 text-xs text-gray-700 hover:bg-gray-50">Home</a>
+            <a href="#about" class="block py-3 px-6 text-xs text-gray-700 hover:bg-gray-50">About</a>
+            <a href="#gallery" class="block py-3 px-6 text-xs text-gray-700 hover:bg-gray-50">Gallery</a>
+            <a href="event.html" class="block py-3 px-6 text-xs text-gray-700 hover:bg-gray-50">Events</a>
+            <a href="#team" class="block py-3 px-6 text-xs text-gray-700 hover:bg-gray-50">Team</a>
+            <div class="p-4">
+                <a href="#" class="join-trigger btn-primary w-full text-center text-xs font-semibold px-5 py-2 rounded-full">Join Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section h-screen flex items-center justify-center">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-3 leading-tight" style="font-family: 'Times New Roman', Times, serif;">
+                    SRMIST Tiruchirappalli
+                    <span class="block text-srm-gold" style="font-family: 'Times New Roman', Times, serif;">
+                        ACM Student Chapter
+                    </span>
+                </h1>                
+                <p class="text-sm md:text-base text-gray-200 max-w-2xl mx-auto mb-8">
+                    Advancing Computing as a Science & Profession. We are a community of innovators at SRM Trichy, dedicated to exploring the frontiers of technology.
+                </p>
+                <div class="space-x-4">
+                    <a href="#" class="join-trigger btn-primary w-full text-center text-xs font-semibold px-5 py-2 rounded-full  border border-white text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-white hover:text-srm-blue transition-colors">Join Us</a>
+                    <a href="#about" class="bg-transparent border border-white text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-white hover:text-srm-blue transition-colors">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">About The Chapter</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center mt-12">
+                    <div class="text-xs md:text-sm text-text-secondary space-y-4 leading-relaxed">
+                        <p>The <strong class="font-semibold text-srm-blue">Association for Computing Machinery (ACM)</strong> is the world's largest educational and scientific computing society. Our chapter at SRMIST Tiruchirappalli brings these global resources to our campus.</p>
+                        <p>We provide a platform for students to network, develop technical skills through workshops, and compete in prestigious challenges. Our goal is to foster a culture of curiosity and excellence in computing.</p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="relative w-full max-w-sm">
+                            <div class="absolute -top-3 -left-3 w-full h-full bg-srm-gold rounded-lg transform -rotate-2"></div>
+                            <img src="srmacm.png" alt="Group of students collaborating" class="relative w-full rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is ACM Section -->
+        <section id="what-is-acm" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center">
+                        <img src="clogo.jpg" alt="ACM Logo" class="w-48 h-48 md:w-64 md:h-64 object-contain">
+                    </div>
+                    <div class="text-xs md:text-sm text-text-secondary space-y-6">
+                        <div>
+                            <h3 class="font-semibold text-lg text-srm-blue mb-2">What is ACM?</h3>
+                            <p>The Association for Computing Machinery is the worldâ??s largest and most prestigious society of computing professionals. It provides the computing field's premier Digital Library and serves its members and the computing profession with leading-edge publications, conferences, and career resources.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-srm-blue mb-2">What We Do</h3>
+                            <p>As the SRMIST Trichy Student Chapter, we bridge the gap between theory and practice. We organize workshops, expert talks, coding competitions, and collaborative projects to provide our members with a competitive edge and prepare them for successful careers in technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Event Photos Carousel Section -->
+        <section id="gallery" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="section-title text-center px-6">Event Gallery</h2>
+                <p class="text-center text-xs text-text-secondary max-w-lg mx-auto mt-2 mb-12 px-6">
+                    A glimpse into our workshops, seminars, and community gatherings.
+                </p>
+                <div class="scroller">
+                    <div class="scroller-inner">
+                        <img src="pp2.jpeg" alt="Event Photo 1" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp1.jpeg" alt="Event Photo 2" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp3.jpeg" alt="Event Photo 3" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp4.jpeg" alt="Event Photo 4" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp5.jpeg" alt="Event Photo 5" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp6.jpeg" alt="Event Photo 6" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp7.jpeg" alt="Event Photo 1" class="rounded-lg h-48 md:h-64 object-cover">
+                        <!-- Duplicate -->
+                         <img src="pp2.jpeg" alt="Event Photo 1" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp1.jpeg" alt="Event Photo 2" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp3.jpeg" alt="Event Photo 3" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp4.jpeg" alt="Event Photo 4" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp5.jpeg" alt="Event Photo 5" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp6.jpeg" alt="Event Photo 6" class="rounded-lg h-48 md:h-64 object-cover">
+                        <img src="pp7.jpeg" alt="Event Photo 1" class="rounded-lg h-48 md:h-64 object-cover">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculty-sponsor" class="py-20 md:py-28 ">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Guiding Our Vision</h2>
+                <div class="mt-12">
+                    <img src="hod.webp" alt="Dr. Kanga Suba Raja" class="w-32 h-32 mx-auto rounded-full shadow-xl border-4 border-white">
+                    <h3 class="font-semibold text-srm-blue mt-4 text-lg">Dr. Kanaga Suba Raja</h3>
+                    <p class="text-sm text-srm-gold font-medium">Faculty Sponsor</p>
+                    <p class="text-xs text-text-secondary mt-1">SRMIST Tiruchirappalli ACM</p>
+                    <p class="text-xs text-text-secondary mt-1">Student Chapter</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Posters Carousel Section -->
+        <section class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="section-title text-center px-6">Past Events</h2>
+                 <p class="text-center text-xs text-text-secondary max-w-lg mx-auto mt-2 mb-12 px-6">
+                    Check out the posters from some of our successful past events.
+                </p>
+                <div class="scroller">
+                    <div class="scroller-inner" style="animation-direction: reverse; animation-duration: 5s;">
+                        <img src="pic1.jpg" alt="Event Poster 1" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic2.jpg" alt="Event Poster 2" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic3.jpg" alt="Event Poster 3" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic4.jpg" alt="Event Poster 4" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic5.jpg" alt="Event Poster 5" class="rounded-lg h-64 md:h-80 object-cover">
+                        <!-- Duplicate the images for a seamless loop -->
+                        <img src="pic1.jpg" alt="Event Poster 1" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic2.jpg" alt="Event Poster 2" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic3.jpg" alt="Event Poster 3" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic4.jpg" alt="Event Poster 4" class="rounded-lg h-64 md:h-80 object-cover">
+                        <img src="pic5.jpg" alt="Event Poster 5" class="rounded-lg h-64 md:h-80 object-cover">
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section 
+        <section id="events" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Upcoming Events</h2>
+                <div class="max-w-3xl mx-auto mt-12 space-y-6">
+                    <div class="card flex flex-col md:flex-row items-center overflow-hidden p-4 md:p-6">
+                        <div class="flex-shrink-0 text-center md:text-left md:pr-6 mb-4 md:mb-0">
+                           <p class="text-xs font-semibold text-srm-gold">AUG</p>
+                           <p class="text-2xl font-bold text-srm-blue">28</p>
+                        </div>
+                        <div class="border-t md:border-t-0 md:border-l border-gray-200 w-full md:w-auto pl-0 md:pl-6 pt-4 md:pt-0">
+                           <h3 class="font-semibold text-srm-blue mb-1 text-sm">Workshop on Competitive Programming</h3>
+                           <p class="text-xs text-text-secondary mb-2">Learn algorithms and data structures to excel in coding contests. Led by industry experts.</p>
+                           <a href="#" class="text-xs font-semibold text-srm-blue hover:text-srm-gold transition-colors">Register Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+
+        <!-- Work With Us Section -->
+        <section id="work-with-us" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Work With Us</h2>
+                <p class="text-xs md:text-sm text-text-secondary max-w-xl mx-auto mb-6">
+                    Interested in taking a leadership role? We're looking for passionate individuals to join our administrative team.
+                </p>
+                <button class="work-trigger btn-primary text-xs font-semibold px-6 py-3 rounded-full shadow-lg">Apply for a Position</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact" class="bg-srm-blue text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left">
+                <!-- About -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">SRMIST Tiruchirappalli ACM</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        The official student chapter of the Association for Computing Machinery at SRM Institute of Science and Technology, Tiruchirappalli campus.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">Quick Links</h3>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#events" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="#team" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">Contact Us</h3>
+                    <p class="text-xs text-gray-300">Have questions? Get in touch.</p>
+                    <a href="mailto:connect@srmtrichy.acm.org" class="text-xs inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        connect@srmtrichy.acm.org
+                    </a>
+                </div>
+                <!-- Social Media -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-base">Connect With Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.instagram.com/acmsrm?igsh=Mzh3eDB6MWtjM3Z1" class="text-gray-300 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://www.linkedin.com/company/srm-ist-acm-student-chapter/" class="text-gray-300 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <!--<a href="#" class="text-gray-300 hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800/50 mt-12 pt-6 text-center text-xs text-gray-400 space-y-2 md:flex md:justify-between md:items-center md:space-y-0">
+                <p>&copy; <span id="year"></span> SRMIST Tiruchirappalli ACM Student Chapter. All Rights Reserved.</p>
+                <p>Developed by <a href="https://www.linkedin.com/in/shaktivel-t-k-803a75335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-500 hover:text-blue-700 transition-colors">Shaktivel</a> and <a href="https://www.linkedin.com/in/jagankarthick?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-500 hover:text-blue-700 transition-colors">Jagan Karthick</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Join Us Modal -->
+    <div id="join-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[100] flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-sm p-6 text-center relative">
+            <button class="modal-close-btn absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="modal-initial-view">
+                <h3 class="text-lg font-semibold text-srm-blue mb-4">Join Our Community</h3>
+                <p class="text-sm text-text-secondary mb-6">Are you a student of SRMIST Tiruchirappalli?</p>
+                <div class="flex justify-center gap-4">
+                    <button  class="modal-yes-btn-join btn-primary text-sm font-semibold px-6 py-2 rounded-full">Yes</button>
+                    <button class="modal-no-btn btn-secondary text-sm font-semibold px-6 py-2 rounded-full">No</button>
+                </div>
+            </div>
+            <div class="modal-no-view hidden">
+                 <h3 class="text-lg font-semibold text-srm-blue mb-4">Contact Us</h3>
+                 <p class="text-sm text-text-secondary mb-4">For collaborations and inquiries, please reach out to our team via email.</p>
+                 <div class="bg-gray-100 p-3 rounded-lg border border-gray-200">
+                    <p class="text-sm font-semibold text-srm-blue">vicechair@srmtrichy.acm.org</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work With Us Modal -->
+    <div id="work-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[100] flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 text-center relative">
+            <button class="modal-close-btn absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="modal-initial-view">
+                <h3 class="text-lg font-semibold text-srm-blue mb-4">Join Our Team</h3>
+                <p class="text-sm text-text-secondary mb-6">Are you a student of SRMIST Tiruchirappalli?</p>
+                <div class="flex justify-center gap-4">
+                    <button class="modal-yes-btn-work btn-primary text-sm font-semibold px-6 py-2 rounded-full">Yes</button>
+                    <button class="modal-no-btn btn-secondary text-sm font-semibold px-6 py-2 rounded-full">No</button>
+                </div>
+            </div>
+            <!-- Teams View -->
+            <div class="modal-teams-view hidden">
+                <h3 class="text-lg font-semibold text-srm-blue mb-4">Apply for a Position</h3>
+                <p class="text-sm text-text-secondary mb-6">Select the team you're interested in joining.
+                Join Our Community and Reach 
+                vicechair@srmtrichy.acm.org via mail.</p>
+                
+                <div class="grid grid-cols-2 gap-3 text-sm">
+                    <button class="team-gform-link btn-primary w-full py-2.5 rounded-md">Research & Innovation</button>
+                    <button class="team-gform-link btn-primary w-full py-2.5 rounded-md">PR Team</button>
+                    <button class="team-gform-link btn-primary w-full py-2.5 rounded-md">Technical Team</button>
+                    <button class="team-gform-link btn-primary w-full py-2.5 rounded-md">Media Team</button>
+                    <button class="team-gform-link btn-primary w-full py-2.5 rounded-md">Newsletter Team</button>
+                    <button class="team-gform-link btn-primary w-full py-2.5 rounded-md">Volunteer</button>
+                </div>
+            </div>
+            <!-- No View -->
+            <div class="modal-no-view hidden">
+                 <h3 class="text-lg font-semibold text-srm-blue mb-4">Contact Us</h3>
+                 <p class="text-sm text-text-secondary mb-4">For collaborations, please reach out to our team via email.</p>
+                 <div class="bg-gray-100 p-3 rounded-lg border border-gray-200">
+                    <p class="text-sm font-semibold text-srm-blue">vicechair@srmtrichy.acm.org</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if(targetElement) {
+                    // Adjust for fixed header height
+                    const headerOffset = document.getElementById('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Auto-scrolling carousels
+        const scrollers = document.querySelectorAll(".scroller");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute("data-animated", true);
+            });
+        }
+
+        // --- Modal Logic ---
+        function setupModal(triggerSelector, modalId) {
+            const triggers = document.querySelectorAll(triggerSelector);
+            const modal = document.getElementById(modalId);
+            if (!triggers.length || !modal) return;
+
+            const closeBtns = modal.querySelectorAll('.modal-close-btn');
+            const yesBtnJoin = modal.querySelector('.modal-yes-btn-join');
+            const yesBtnWork = modal.querySelector('.modal-yes-btn-work');
+            const noBtns = modal.querySelectorAll('.modal-no-btn');
+            const initialView = modal.querySelector('.modal-initial-view');
+            const noView = modal.querySelector('.modal-no-view');
+            const teamsView = modal.querySelector('.modal-teams-view');
+            const teamLinks = modal.querySelectorAll('.team-gform-link');
+
+            const showModal = () => {
+                initialView.classList.remove('hidden');
+                noView.classList.add('hidden');
+                if (teamsView) teamsView.classList.add('hidden');
+                modal.classList.remove('hidden');
+            };
+
+            const hideModal = () => {
+                modal.classList.add('hidden');
+            };
+
+            triggers.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showModal();
+                });
+            });
+
+            closeBtns.forEach(btn => btn.addEventListener('click', hideModal));
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    hideModal();
+                }
+            });
+
+            noBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    initialView.classList.add('hidden');
+                    if (teamsView) teamsView.classList.add('hidden');
+                    noView.classList.remove('hidden');
+                });
+            });
+
+            // "Join Us" modal logic
+            if (yesBtnJoin) {
+                yesBtnJoin.addEventListener('click', () => {
+                    // IMPORTANT: Replace with your actual WhatsApp community link
+                    window.open('https://chat.whatsapp.com/JmxtsZbjJLpH1Q0O8flN6L?mode=ac_t', '_blank');
+                    hideModal();
+                });
+            }
+
+            // "Work With Us" modal logic
+            if (yesBtnWork) {
+                yesBtnWork.addEventListener('click', () => {
+                    initialView.classList.add('hidden');
+                    teamsView.classList.remove('hidden');
+                });
+            }
+
+            if (teamLinks) {
+                teamLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        // IMPORTANT: Replace with your actual Google Form link
+                        window.open('https://forms.gle/813Rve6DH5yUASqM9', '_blank');
+                        hideModal();
+                    });
+                });
+            }
+        }
+
+        setupModal('.join-trigger', 'join-modal');
+        setupModal('.work-trigger', 'work-modal');
+
+    </script>
+</body>
+</html>
+
