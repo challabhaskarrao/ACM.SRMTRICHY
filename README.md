@@ -39,25 +39,11 @@ Here's what makes this website special and what we have implemented:
 *   **Animations**: [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/)
 *   **Components**: Integrated premium open-source UI components (React Bits)
 
-## 🚀 Getting Started Locally
+## 🚀 Live Deployment
 
-Want to run this project on your own machine? Follow these steps:
+The website has been successfully deployed and is live for the world to see! 
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/challabhaskarrao/ACM.SRMTRICHY.git
-    cd ACM.SRMTRICHY
-    ```
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-3.  **Run the development server**:
-    ```bash
-    npm run dev
-    ```
-4.  **Open in Browser**:
-    Navigate to [http://localhost:3000](http://localhost:3000) to see the magic happen! ✨
+**🔗 Visit our live site here:** [https://acm-srmtrichy.vercel.app/](https://acm-srmtrichy.vercel.app/) ✨
 
 ## 📬 Contact Us
 
