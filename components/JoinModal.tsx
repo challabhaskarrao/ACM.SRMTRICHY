@@ -118,7 +118,7 @@ export default function JoinModal({ isOpen, onClose, initialStep = 'question' }:
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-end',
-          background: '#0d0d1a',
+          background: '#ffffff',
         }}>
           <div className="jm-top-bar" style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 3 }} />
           <button
@@ -365,7 +365,7 @@ export default function JoinModal({ isOpen, onClose, initialStep = 'question' }:
                 <div className="jm-success-ring">🎉</div>
                 <h2 className="jm-success-title">Application Submitted!</h2>
                 <p className="jm-success-desc">
-                  Thanks, <strong style={{ color: '#fff' }}>{form.name || 'there'}</strong>! We've received
+                  Thanks, <strong style={{ color: '#111827' }}>{form.name || 'there'}</strong>! We've received
                   your application and will reach out to<br />
                   <span className="jm-success-accent">{form.email}</span>
                   <br />within 3–5 business days.

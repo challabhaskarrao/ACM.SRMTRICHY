@@ -576,7 +576,7 @@ const MagicBento: React.FC<MagicBentoProps> = ({
                     className="object-cover object-center transform transition-transform duration-700 group-hover:scale-105"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A1A]/95 via-[#0A0A1A]/50 to-[#0A0A1A]/20 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/90 via-[#111827]/40 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
                 </div>
               )}
               {card.label && (

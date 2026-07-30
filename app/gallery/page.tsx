@@ -62,7 +62,7 @@ export default function GalleryPage() {
   return (
     <SmoothScroll>
       <Navbar />
-      <main className="pt-32 pb-24 min-h-screen bg-[#07070C]">
+      <main className="pt-32 pb-24 min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             subtitle="Event Gallery"

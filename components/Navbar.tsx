@@ -23,7 +23,7 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
   useEffect(() => {
     if (pathname === '/events' || pathname === '/gallery') {
       setActive(pathname);
-      setScrolled(true); // Always dark on other pages
+      setScrolled(true);
       return;
     }
 
@@ -39,7 +39,6 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
       }
     };
     
-    // Initial check
     onScroll();
     
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -52,18 +51,20 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#07070C]/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
+        scrolled
+          ? 'bg-white/90 backdrop-blur-xl border-b border-gray-200/80 shadow-sm'
+          : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 border border-gold/40 flex items-center justify-center bg-gold/5">
-            <span className="text-gold font-bold text-xs tracking-wider">ACM</span>
+          <div className="w-9 h-9 rounded-lg border border-accent/30 bg-accent/5 flex items-center justify-center transition-colors group-hover:bg-accent/10">
+            <span className="text-accent font-bold text-xs tracking-wider">ACM</span>
           </div>
           <div className="hidden sm:block">
-            <p className="text-sm font-semibold text-white leading-none">SRMIST Trichy</p>
-            <p className="text-[10px] text-white/30 mt-0.5 tracking-widest uppercase">Student Chapter</p>
+            <p className="text-sm font-semibold text-gray-900 leading-none">SRMIST Trichy</p>
+            <p className="text-[10px] text-gray-400 mt-0.5 tracking-widest uppercase">Student Chapter</p>
           </div>
         </Link>
 
@@ -75,17 +76,17 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4 py-2 text-sm tracking-wide transition-colors duration-200 ${
+                className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200 rounded-lg ${
                   isActive
-                    ? 'text-gold'
-                    : 'text-white/50 hover:text-white'
+                    ? 'text-accent'
+                    : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
                 {link.name}
                 {isActive && (
                   <motion.div
                     layoutId="nav-underline"
-                    className="absolute h-px left-4 right-4 bg-gradient-to-r from-gold to-violet mt-0.5"
+                    className="absolute bottom-0 left-3 right-3 h-0.5 bg-accent rounded-full"
                     transition={{ type: 'spring', stiffness: 400, damping: 35 }}
                   />
                 )}
@@ -98,7 +99,7 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
         <button
           id="navbar-join-btn"
           onClick={openJoinModal}
-          className="hidden md:block btn-primary px-5 py-2 text-xs font-bold tracking-widest uppercase"
+          className="hidden md:block btn-primary px-5 py-2.5 text-sm font-semibold"
         >
           Join Us
         </button>
@@ -106,12 +107,12 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors"
           aria-label="Toggle menu"
         >
-          <motion.span animate={mobileOpen ? { rotate: 45, y: 6 } : {}} className="w-5 h-px bg-white block" />
-          <motion.span animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }} className="w-5 h-px bg-white block" />
-          <motion.span animate={mobileOpen ? { rotate: -45, y: -6 } : {}} className="w-5 h-px bg-white block" />
+          <motion.span animate={mobileOpen ? { rotate: 45, y: 6 } : {}} className="w-5 h-0.5 bg-gray-700 block rounded-full" />
+          <motion.span animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }} className="w-5 h-0.5 bg-gray-700 block rounded-full" />
+          <motion.span animate={mobileOpen ? { rotate: -45, y: -6 } : {}} className="w-5 h-0.5 bg-gray-700 block rounded-full" />
         </button>
       </nav>
 
@@ -122,9 +123,9 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-[#07070C] border-t border-white/5 overflow-hidden"
+            className="md:hidden bg-white border-t border-gray-100 overflow-hidden shadow-lg"
           >
-            <div className="px-6 py-4 flex flex-col gap-1">
+            <div className="px-5 py-4 flex flex-col gap-1">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.name}
@@ -133,7 +134,11 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
                   initial={{ x: -16, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.05 }}
-                  className="py-3 text-white/60 hover:text-gold border-b border-white/5 text-sm transition-colors"
+                  className={`py-3 px-3 rounded-lg text-sm font-medium transition-colors ${
+                    active === link.href
+                      ? 'text-accent bg-accent/5'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  }`}
                 >
                   {link.name}
                 </motion.a>
@@ -141,7 +146,7 @@ export default function Navbar({ openJoinModal }: { openJoinModal?: () => void }
               <button
                 id="mobile-join-btn"
                 onClick={() => { openJoinModal?.(); setMobileOpen(false); }}
-                className="btn-primary mt-4 py-3 text-center text-xs font-bold tracking-widest uppercase w-full"
+                className="btn-primary mt-3 py-3 text-center text-sm font-semibold w-full"
               >
                 Join Us
               </button>

@@ -12,9 +12,9 @@ interface GlassCardProps {
 export default function GlassCard({ children, className = '', hover = true }: GlassCardProps) {
   return (
     <motion.div
-      whileHover={hover ? { y: -5 } : {}}
+      whileHover={hover ? { y: -3 } : {}}
       transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-      className={`glass-card rounded-sm p-6 ${className}`}
+      className={`glass-card p-6 ${className}`}
     >
       {children}
     </motion.div>

@@ -26,7 +26,6 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
     e.preventDefault();
     setStatus('submitting');
     
-    // Construct email body
     const subject = encodeURIComponent(`Contact Inquiry - ${form.name}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\n` +
@@ -34,10 +33,8 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
       `Message:\n${form.message}`
     );
     
-    // Trigger mail client
     window.location.href = `mailto:connect@srmtrichy.acm.org?subject=${subject}&body=${body}`;
 
-    // Show success UI after a brief delay
     setTimeout(() => {
       setStatus('success');
       setForm({ name: '', email: '', message: '' });
@@ -46,42 +43,42 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
   };
 
   return (
-    <SectionWrapper id="contact">
-      <div className="max-w-6xl mx-auto pl-8 lg:pl-16">
+    <SectionWrapper id="contact" className="bg-surface">
+      <div className="max-w-6xl mx-auto px-2">
         <SectionHeading subtitle="Get In Touch" title="Contact Us" description="Have questions or want to join? We'd love to hear from you." />
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="glass-card rounded-sm p-6 space-y-5">
+            <div className="glass-card p-6 space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 border border-cyan/30 bg-cyan/5 flex items-center justify-center flex-shrink-0 rounded-sm">
-                  <span className="text-cyan text-xs">📍</span>
+                <div className="w-10 h-10 border border-accent/20 bg-accent/5 flex items-center justify-center flex-shrink-0 rounded-xl">
+                  <span className="text-accent text-sm">📍</span>
                 </div>
                 <div>
-                  <p className="text-white/50 text-xs font-semibold tracking-widest uppercase mono mb-1">Address</p>
-                  <p className="text-muted text-sm leading-relaxed">SRM Institute of Science and Technology,<br />Tiruchirappalli, Tamil Nadu, India</p>
+                  <p className="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-1">Address</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">SRM Institute of Science and Technology,<br />Tiruchirappalli, Tamil Nadu, India</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 border border-purple/30 bg-purple/5 flex items-center justify-center flex-shrink-0 rounded-sm">
-                  <span className="text-purple text-xs">✉️</span>
+                <div className="w-10 h-10 border border-accent/20 bg-accent/5 flex items-center justify-center flex-shrink-0 rounded-xl">
+                  <span className="text-accent text-sm">✉️</span>
                 </div>
                 <div>
-                  <p className="text-white/50 text-xs font-semibold tracking-widest uppercase mono mb-1">Email</p>
-                  <p className="text-muted text-sm">connect@srmtrichy.acm.org</p>
+                  <p className="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-1">Email</p>
+                  <p className="text-gray-600 text-sm">connect@srmtrichy.acm.org</p>
                 </div>
               </div>
             </div>
 
             {/* Social */}
             <div>
-              <p className="text-white/30 text-xs tracking-widest uppercase mb-4 mono">Connect With Us</p>
+              <p className="text-gray-400 text-xs tracking-widest uppercase mb-4 font-medium">Connect With Us</p>
               <div className="flex gap-3">
                 {socialLinks.map((s) => (
                   <a
@@ -90,9 +87,9 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.name}
-                    className="w-10 h-10 border border-white/[0.06] bg-white/[0.02] flex items-center justify-center hover:border-cyan/40 hover:bg-cyan/5 transition-all duration-300 group rounded-sm"
+                    className="w-10 h-10 border border-gray-200 bg-white flex items-center justify-center hover:border-accent/40 hover:bg-accent/5 transition-all duration-300 group rounded-xl"
                   >
-                    <svg className="w-4 h-4 text-white/25 group-hover:text-cyan transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-gray-400 group-hover:text-accent transition-colors" fill="currentColor" viewBox="0 0 24 24">
                       <path d={s.icon} />
                     </svg>
                   </a>
@@ -103,7 +100,7 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
             <button
               id="contact-join-btn"
               onClick={openJoinModal}
-              className="btn-primary w-full py-3.5 text-sm rounded-sm tracking-widest uppercase"
+              className="btn-primary w-full py-3.5 text-sm font-semibold"
             >
               <span>Join Us →</span>
             </button>
@@ -115,14 +112,14 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="glass-card rounded-sm p-8 relative overflow-hidden">
+            <div className="glass-card p-8 relative overflow-hidden">
               {status === 'success' && (
-                <div className="absolute inset-0 z-10 bg-[#0d0d1a]/95 backdrop-blur-md flex flex-col items-center justify-center animate-fadeIn">
-                  <div className="w-16 h-16 rounded-full bg-cyan/10 border-2 border-cyan/30 flex items-center justify-center text-2xl mb-4 shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+                <div className="absolute inset-0 z-10 bg-white/95 backdrop-blur-sm flex flex-col items-center justify-center animate-fadeIn rounded-card">
+                  <div className="w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center text-accent text-2xl mb-4">
                     ✓
                   </div>
-                  <h4 className="text-white font-bold text-lg mb-2">Message Sent!</h4>
-                  <p className="text-muted text-sm text-center max-w-[200px]">
+                  <h4 className="text-gray-900 font-bold text-lg mb-2">Message Sent!</h4>
+                  <p className="text-gray-500 text-sm text-center max-w-[220px]">
                     We've opened your mail client. Thanks for reaching out!
                   </p>
                 </div>
@@ -130,33 +127,33 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
               
               <form className="space-y-5" onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="contact-name" className="text-white/35 text-xs tracking-widest uppercase mb-2 block mono">Name</label>
+                  <label htmlFor="contact-name" className="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-2 block">Name</label>
                   <input
                     id="contact-name" type="text" placeholder="Your name" required
                     value={form.name} onChange={e => setForm({...form, name: e.target.value})}
-                    className="w-full px-4 py-3 bg-white/[0.02] border border-white/[0.06] text-white text-sm placeholder-white/15 focus:outline-none focus:border-cyan/50 transition-colors rounded-sm"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 text-gray-900 text-sm placeholder-gray-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all rounded-input"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="text-white/35 text-xs tracking-widest uppercase mb-2 block mono">Email</label>
+                  <label htmlFor="contact-email" className="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-2 block">Email</label>
                   <input
                     id="contact-email" type="email" placeholder="you@example.com" required
                     value={form.email} onChange={e => setForm({...form, email: e.target.value})}
-                    className="w-full px-4 py-3 bg-white/[0.02] border border-white/[0.06] text-white text-sm placeholder-white/15 focus:outline-none focus:border-cyan/50 transition-colors rounded-sm"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 text-gray-900 text-sm placeholder-gray-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all rounded-input"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-message" className="text-white/35 text-xs tracking-widest uppercase mb-2 block mono">Message</label>
+                  <label htmlFor="contact-message" className="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-2 block">Message</label>
                   <textarea
                     id="contact-message" rows={4} placeholder="Your message..." required
                     value={form.message} onChange={e => setForm({...form, message: e.target.value})}
-                    className="w-full px-4 py-3 bg-white/[0.02] border border-white/[0.06] text-white text-sm placeholder-white/15 focus:outline-none focus:border-cyan/50 transition-colors resize-none rounded-sm"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 text-gray-900 text-sm placeholder-gray-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all resize-none rounded-input"
                   />
                 </div>
                 <button 
                   type="submit" 
                   disabled={status === 'submitting'}
-                  className="btn-primary w-full py-3.5 text-sm rounded-sm tracking-widest uppercase disabled:opacity-50"
+                  className="btn-primary w-full py-3.5 text-sm font-semibold disabled:opacity-50"
                 >
                   <span>{status === 'submitting' ? 'Opening Mail...' : 'Send Message →'}</span>
                 </button>
@@ -166,14 +163,14 @@ export default function Contact({ openJoinModal }: { openJoinModal?: () => void 
         </div>
 
         {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-white/[0.03] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/10 text-xs tracking-wide">
+        <div className="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-400 text-xs tracking-wide">
             © 2025 SRMIST Tiruchirappalli ACM Student Chapter. All rights reserved.
           </p>
-          <p className="text-white/10 text-xs mono">
-            Powered by <span className="text-cyan">ACM</span>
+          <p className="text-gray-400 text-xs">
+            Powered by <span className="text-accent font-medium">ACM</span>
           </p>
-          <p className="text-white/[0.06] text-[10px] mono">
+          <p className="text-gray-300 text-[10px]">
             Designed with &lt;/&gt; by ACM Team
           </p>
         </div>

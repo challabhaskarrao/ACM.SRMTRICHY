@@ -14,8 +14,8 @@ const stats = [
 
 export default function About() {
   return (
-    <SectionWrapper id="about" className="cyber-grid">
-      <div className="max-w-7xl mx-auto pl-8 lg:pl-16">
+    <SectionWrapper id="about" className="bg-surface">
+      <div className="max-w-7xl mx-auto px-2">
         <SectionHeading
           subtitle="About Us"
           title="Who We Are"
@@ -24,12 +24,12 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           <GlassCard hover={false}>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-1.5 h-1.5 rounded-full bg-cyan shadow-[0_0_6px_rgba(6,182,212,0.6)]" />
-              <p className="text-cyan text-xs font-semibold tracking-widest uppercase mono">Our Mission</p>
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <p className="text-accent text-xs font-semibold tracking-widest uppercase">Our Mission</p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Fostering Innovation</h3>
-            <p className="text-muted leading-relaxed text-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Fostering Innovation</h3>
+            <p className="text-gray-500 leading-relaxed text-sm">
               We strive to foster a culture of innovation and collaboration among students.
               Our chapter provides a platform for members to develop their skills in computing,
               network with industry professionals, and contribute to the broader computing community.
@@ -39,12 +39,12 @@ export default function About() {
           </GlassCard>
 
           <GlassCard hover={false}>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-1.5 h-1.5 rounded-full bg-purple shadow-[0_0_6px_rgba(139,92,246,0.6)]" />
-              <p className="text-purple text-xs font-semibold tracking-widest uppercase mono">ACM Global</p>
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-2 h-2 rounded-full bg-accent-dark" />
+              <p className="text-accent-dark text-xs font-semibold tracking-widest uppercase">ACM Global</p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Association for Computing Machinery</h3>
-            <p className="text-muted leading-relaxed text-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Association for Computing Machinery</h3>
+            <p className="text-gray-500 leading-relaxed text-sm">
               ACM, the world's largest educational and scientific computing society, delivers
               resources that advance computing as a science and profession. Founded in 1947,
               ACM has a global membership of over 100,000 professionals and students, providing
@@ -54,7 +54,7 @@ export default function About() {
           </GlassCard>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/[0.03] pt-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-200 pt-12">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -65,7 +65,7 @@ export default function About() {
               className="text-center"
             >
               <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{stat.value}</div>
-              <div className="text-white/25 text-xs tracking-widest uppercase mono">{stat.label}</div>
+              <div className="text-gray-400 text-xs tracking-widest uppercase font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </div>

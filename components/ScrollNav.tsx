@@ -21,7 +21,6 @@ export default function ScrollNav() {
       const scrollY = window.scrollY;
       setVisible(scrollY > 80);
 
-      // Find the active section
       const reversedSections = [...sections].reverse();
       for (const sec of reversedSections) {
         const el = document.getElementById(sec.id);
@@ -65,7 +64,7 @@ export default function ScrollNav() {
                   <motion.div
                     animate={{
                       width:           isActive ? 28 : 12,
-                      backgroundColor: isActive ? '#F5A623' : 'rgba(255,255,255,0.2)',
+                      backgroundColor: isActive ? '#06b6d4' : '#D1D5DB',
                     }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="h-px origin-left"
@@ -74,23 +73,23 @@ export default function ScrollNav() {
                     animate={{
                       width:  isActive ? 8 : 5,
                       height: isActive ? 8 : 5,
-                      backgroundColor: isActive ? '#F5A623' : 'rgba(255,255,255,0.25)',
-                      boxShadow: isActive ? '0 0 8px rgba(245,166,35,0.6)' : 'none',
+                      backgroundColor: isActive ? '#06b6d4' : '#D1D5DB',
+                      boxShadow: isActive ? '0 0 6px rgba(6,182,212,0.3)' : 'none',
                     }}
                     transition={{ duration: 0.3 }}
                     className="rounded-full flex-shrink-0"
                   />
                 </div>
 
-                {/* Label — only shows when active or hovered */}
+                {/* Label */}
                 <motion.span
                   animate={{
                     opacity: isActive ? 1 : 0,
                     x:       isActive ? 0 : -6,
                   }}
                   className={`text-[11px] font-semibold tracking-widest uppercase whitespace-nowrap pointer-events-none
-                    ${isActive ? 'text-gold' : 'text-white/40'}
-                    group-hover:opacity-100 group-hover:text-white transition-colors`}
+                    ${isActive ? 'text-accent' : 'text-gray-400'}
+                    group-hover:opacity-100 group-hover:text-gray-600 transition-colors`}
                   style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                 >
                   {sec.label}

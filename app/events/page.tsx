@@ -50,7 +50,7 @@ export default function EventsPage() {
   return (
     <SmoothScroll>
       <Navbar />
-      <main className="pt-32 pb-24 min-h-screen bg-[#07070C]">
+      <main className="pt-32 pb-24 min-h-screen bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <SectionHeading
             subtitle="Our Events"
@@ -67,14 +67,14 @@ export default function EventsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="premium-card rounded-sm p-8 md:p-12"
+              className="premium-card rounded-card p-8 md:p-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center font-heading">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center font-heading">
                 Future Makers Initiative
               </h2>
               
               <div className="grid md:grid-cols-5 gap-10 items-center">
-                <div className="md:col-span-2 overflow-hidden rounded-sm border border-gold/20 shadow-gold">
+                <div className="md:col-span-2 overflow-hidden rounded-card border border-accent/20 shadow-sm">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
                     <source src="/assets/acm1_1.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -86,7 +86,7 @@ export default function EventsPage() {
                     Lab visit for school students
                   </h3>
                   
-                  <div className="flex flex-wrap items-center gap-6 text-xs text-gold tracking-widest uppercase font-semibold mb-6">
+                  <div className="flex flex-wrap items-center gap-6 text-xs text-accent-dark tracking-widest uppercase font-semibold mb-6">
                     <span className="flex items-center gap-2">
                       <span className="text-base">📅</span> August 01, 2025
                     </span>
@@ -95,10 +95,10 @@ export default function EventsPage() {
                     </span>
                   </div>
                   
-                  <p className="text-muted text-sm leading-relaxed mb-4">
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
                     We recently hosted an enriching lab visit for students from Alpha School, Tiruchirappalli. The students had the opportunity to explore our state-of-the-art facilities, including the AR/VR Lab Centre of Excellence, MAC Lab, MATLAB Lab, Biotech Lab, and Neuro Microbiology Lab.
                   </p>
-                  <p className="text-muted text-sm leading-relaxed">
+                  <p className="text-gray-500 text-sm leading-relaxed">
                     During the visit, they gained hands-on experience and insights into various scientific and technological applications. The event aimed to inspire and motivate young minds, providing them with a glimpse into the exciting world of science and technology. The visit was a resounding success, with students and faculty alike benefiting from the experience. We're proud to share our knowledge and facilities with the next generation of innovators and leaders !
                   </p>
                 </div>
@@ -111,9 +111,9 @@ export default function EventsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="premium-card rounded-sm p-8 md:p-12"
+              className="premium-card rounded-card p-8 md:p-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center font-heading">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center font-heading">
                 Guest Lecture
               </h2>
               
@@ -123,7 +123,7 @@ export default function EventsPage() {
                     Empowering Students Through ACM
                   </h3>
                   
-                  <div className="flex flex-wrap items-center gap-6 text-xs text-gold tracking-widest uppercase font-semibold mb-6">
+                  <div className="flex flex-wrap items-center gap-6 text-xs text-accent-dark tracking-widest uppercase font-semibold mb-6">
                     <span className="flex items-center gap-2">
                       <span className="text-base">📅</span> August 05, 2025
                     </span>
@@ -132,12 +132,12 @@ export default function EventsPage() {
                     </span>
                   </div>
                   
-                  <p className="text-muted text-sm leading-relaxed">
+                  <p className="text-gray-500 text-sm leading-relaxed">
                     On 5 August 2025, the School of Computing, SRM Institute of Science and Technology, Tiruchirappalli, organized a seminar titled Empowering Students Through ACM Explore, Engage, Excel. Delivered by Dr. Maria DSouza Choudhary, Principal MTS at Oracle India and Executive Council Member of ACM India, the session highlighted ACMs resources, networking opportunities, and skill-building platforms, encouraging students to actively participate and leverage ACM membership for academic and professional advancement.
                   </p>
                 </div>
                 
-                <div className="md:col-span-2 order-1 md:order-2 overflow-hidden rounded-sm border border-violet/20 shadow-violet">
+                <div className="md:col-span-2 order-1 md:order-2 overflow-hidden rounded-card border border-accent/20 shadow-sm">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
                     <source src="/assets/videoevent1.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -152,14 +152,14 @@ export default function EventsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="premium-card rounded-sm p-8 md:p-12"
+              className="premium-card rounded-card p-8 md:p-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center font-heading">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center font-heading">
                 ACM 2025-26 Kickoff
               </h2>
               
               <div className="grid md:grid-cols-5 gap-10 items-center">
-                <div className="md:col-span-2 overflow-hidden rounded-sm border border-gold/20">
+                <div className="md:col-span-2 overflow-hidden rounded-card border border-accent/20">
                   <Image 
                     src="/assets/kickoff.jpeg" 
                     alt="Kickoff Meeting" 
@@ -175,7 +175,7 @@ export default function EventsPage() {
                     Strategy and Planning Meeting
                   </h3>
                   
-                  <div className="flex flex-wrap items-center gap-6 text-xs text-gold tracking-widest uppercase font-semibold mb-6">
+                  <div className="flex flex-wrap items-center gap-6 text-xs text-accent-dark tracking-widest uppercase font-semibold mb-6">
                     <span className="flex items-center gap-2">
                       <span className="text-base">📅</span> August 04, 2025
                     </span>
@@ -184,13 +184,13 @@ export default function EventsPage() {
                     </span>
                   </div>
                   
-                  <p className="text-muted text-sm leading-relaxed mb-4">
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
                     Kicking off the new fiscal year 2025-26 with a bang!
                   </p>
-                  <p className="text-muted text-sm leading-relaxed mb-4">
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
                     Our SRMIST Tiruchirappalli ACM Student Chapter team came together for a strategy and planning meeting today to map out our goals and objectives for this year.
                   </p>
-                  <p className="text-muted text-sm leading-relaxed">
+                  <p className="text-gray-500 text-sm leading-relaxed">
                     A huge thank you to our team members for their dedication and enthusiasm. We're looking forward to an amazing year ahead!
                   </p>
                 </div>
@@ -199,13 +199,13 @@ export default function EventsPage() {
 
           </div>
 
-          {/* New Past Events Gallery Subsection */}
+          {/* Past Events Gallery Subsection */}
           <motion.section
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="premium-card rounded-sm p-8 md:p-12 mt-20"
+            className="premium-card rounded-card p-8 md:p-12 mt-20"
           >
             <SectionHeading
               subtitle="Highlights"
@@ -223,7 +223,7 @@ export default function EventsPage() {
                 enableTilt={true}
                 enableMagnetism={true}
                 clickEffect={true}
-                glowColor="139, 92, 246"
+                glowColor="6, 182, 212"
               />
             </div>
           </motion.section>

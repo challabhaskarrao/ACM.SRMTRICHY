@@ -17,9 +17,9 @@ export default function SectionHeading({ subtitle, title, description, align = '
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-cyan text-xs font-semibold tracking-widest uppercase mb-3 mono"
+          className="text-accent text-xs font-semibold tracking-widest uppercase mb-3"
         >
-          // {subtitle}
+          {subtitle}
         </motion.p>
       )}
       <motion.h2
@@ -27,7 +27,7 @@ export default function SectionHeading({ subtitle, title, description, align = '
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.08 }}
-        className="text-3xl md:text-5xl font-bold text-white"
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900"
       >
         {title}
       </motion.h2>
@@ -45,7 +45,7 @@ export default function SectionHeading({ subtitle, title, description, align = '
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className={`mt-5 text-muted text-base max-w-2xl leading-relaxed ${align === 'center' ? 'mx-auto' : ''}`}
+          className={`mt-5 text-gray-500 text-base md:text-lg max-w-2xl leading-relaxed ${align === 'center' ? 'mx-auto' : ''}`}
         >
           {description}
         </motion.p>
