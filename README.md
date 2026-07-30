@@ -1,35 +1,36 @@
 <div align="center">
-  <img src="public/assets/acm-logo.png" alt="ACM SRM TRICHY Logo" width="200"/>
+  <img src="public/assets/acm-logo.png" alt="ACM SRM TRICHY Logo" width="160"/>
   <h1>🎓 ACM SRMIST Tiruchirappalli Student Chapter 🚀</h1>
-  <p><strong>Empowering students through technology, collaboration, and innovation.</strong></p>
+  <p><strong>Official website of the ACM Student Chapter at SRM Institute of Science and Technology, Tiruchirappalli.</strong></p>
+  <p>A clean, white-first, premium SaaS-quality web application built to showcase workshops, events, and computing chapter initiatives.</p>
 </div>
 
 ---
 
 ## 🌟 About the Project
 
-Welcome to the official repository for the **ACM SRMIST Tiruchirappalli Student Chapter** website! 🌐 This platform is designed to be the digital home for our computing community, showcasing our technical events, leadership, galleries, and ways for students to engage and grow.
+Welcome to the official repository for the **ACM SRMIST Tiruchirappalli Student Chapter** website! 🌐 This platform serves as the digital home for our computing community, showcasing our technical events, leadership, galleries, and onboarding opportunities.
 
-Built with performance, modern aesthetics, and smooth interactivity in mind, the website serves as the primary touchpoint for both current members and aspiring tech enthusiasts.
+The website has been completely redesigned with a **premium, white-first minimalist SaaS aesthetic** (inspired by modern industry leaders like bavio.in), prioritizing clean hierarchy, consistent spacing, and smooth interactive components.
 
-## ✨ Key Features & Highlights
+---
 
-Here's what makes this website special and what we have implemented:
+## ✨ Features & Highlights
 
-*   **📱 Fully Responsive Design**: Built mobile-first using Tailwind CSS, ensuring a seamless experience across phones, tablets, and desktops.
-*   **🎭 Stunning Visual Effects**: 
-    *   **Glassmorphism & Gradients**: Premium UI design with frosted glass elements (`GradualBlur`) and animated gradient borders.
-    *   **Advanced Animations**: Leveraged `framer-motion` and `gsap` for silky smooth scroll animations, text rotations (`RotatingText`), and interactive bento grids (`MagicBento`).
-    *   **Immersive Hero Section**: Featuring dynamic tech-themed backgrounds and 3D visual cues.
-*   **🗓️ Event Management**: 
-    *   **Showcases**: Carousels and auto-scrolling photo galleries to highlight past tech events, hackathons, and workshops.
-    *   **Dedicated Event Pages**: Detailed views for specific events to provide schedules and registration info.
-*   **👥 Seamless Onboarding (Join Us Flow)**:
-    *   A custom-built, fully responsive modal that guides users based on their affiliation.
-    *   **SRMIST Students**: Direct access to chapter application forms.
-    *   **Global Members**: Easy routing to global ACM membership pathways.
-    *   **One-Click Contact**: Integrated `mailto:` functionality directly connects applicants to `connect@srmtrichy.acm.org`.
-*   **⚡ Modern Tech Stack**: Powered by **Next.js 14**, **React**, and **TypeScript** for maximum speed, type-safety, and SEO optimization.
+Here is what makes this website special:
+
+*   **⚪ Premium White-First Theme**: Rebuilt the entire design system using a light-mode foundation (`#FFFFFF` background, `#F8FAFC` light surfaces, and `#E5E7EB` borders) with ACM's signature cyan (`#06b6d4`) as a sophisticated accent color.
+*   **📱 Universal Responsiveness**: Thoroughly audited and optimized for all viewports from **320px** (mobile screens) to **1920px** (large desktops), ensuring no horizontal scrolling, overflowing containers, or broken grids.
+*   **🎭 Silky Smooth Animations**:
+    *   **Interactive Bento Grids**: Utilizes `MagicBento` component with custom-tuned mouse spotlights and border glow effects on the `/events` and `/gallery` pages.
+    *   **Rotating Typography**: Employs interactive `RotatingText` for dynamic text loops in the Hero section.
+    *   **Curtain Splash Screen**: A premium animated white curtain splash screen on load.
+*   **🗓️ Event & Gallery Management**: Dedicated, clean multi-column layouts showcasing bootcamp highlights, guest lectures, and student strategies.
+*   **👥 Affiliation Onboarding (Join Us Flow)**:
+    *   An animated `JoinModal` built with clean input fields, custom options selection, and mail confirmation integration.
+*   **⚡ Modern Tech Stack**: Built with Next.js 14, React 18, and TypeScript, configured for **Node.js 22 LTS** compatibility.
+
+---
 
 ## 🛠️ Technology Stack
 
@@ -37,13 +38,17 @@ Here's what makes this website special and what we have implemented:
 *   **Language**: [TypeScript](https://www.typescriptlang.org/)
 *   **Styling**: [Tailwind CSS](https://tailwindcss.com/) + Custom CSS Modules
 *   **Animations**: [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/)
-*   **Components**: Integrated premium open-source UI components (React Bits)
+*   **Environment**: Node.js >=22.0.0 (LTS compatible)
+
+---
 
 ## 🚀 Live Deployment
 
 The website has been successfully deployed and is live for the world to see! 
 
 **🔗 Visit our live site here:** [https://acm-srmtrichy.vercel.app/](https://acm-srmtrichy.vercel.app/) ✨
+
+---
 
 ## 📬 Contact Us
 
