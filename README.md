@@ -3,7 +3,34 @@
   <h1>🎓 ACM SRMIST Tiruchirappalli Student Chapter 🚀</h1>
   <p><strong>Official website of the ACM Student Chapter at SRM Institute of Science and Technology, Tiruchirappalli.</strong></p>
   <p>A clean, white-first, premium SaaS-quality web application built to showcase workshops, events, and computing chapter initiatives.</p>
+
+  <br/>
+
+  <!-- Badges for Repository Visibility -->
+  [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+  [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-FF0050?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+  [![Deployed on Vercel](https://img.shields.io/badge/Vercel-Live-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://acm-srmtrichy.vercel.app/)
+  [![Node.js](https://img.shields.io/badge/Node.js-≥22-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+
 </div>
+
+---
+
+## 📑 Table of Contents
+
+- [🌟 About the Project](#-about-the-project)
+- [✨ Features & Highlights](#-features--highlights)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📦 Getting Started](#-getting-started)
+- [🚀 Live Deployment](#-live-deployment)
+- [📂 Project Structure](#-project-structure)
+- [🤝 Contributing](#-contributing)
+- [📬 Contact Us](#-contact-us)
+- [📄 License](#-license)
 
 ---
 
@@ -34,28 +61,116 @@ Here is what makes this website special:
 
 ## 🛠️ Technology Stack
 
-*   **Framework**: [Next.js](https://nextjs.org/) (App Router)
-*   **Language**: [TypeScript](https://www.typescriptlang.org/)
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) + Custom CSS Modules
-*   **Animations**: [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/)
-*   **Environment**: Node.js >=22.0.0 (LTS compatible)
+| Technology | Version | Purpose |
+|---|---|---|
+| [Next.js](https://nextjs.org/) | 14.2 | App Router Framework |
+| [React](https://react.dev/) | 18.3 | UI Library |
+| [TypeScript](https://www.typescriptlang.org/) | 5.4 | Type Safety |
+| [Tailwind CSS](https://tailwindcss.com/) | 3.4 | Utility-first Styling |
+| [Framer Motion](https://www.framer.com/motion/) | 11.0 | Declarative Animations |
+| [GSAP](https://gsap.com/) | 3.12 | Advanced Animations |
+| [Three.js](https://threejs.org/) | 0.164 | 3D Graphics |
+| [Lenis](https://lenis.studiofreight.com/) | 1.1 | Smooth Scrolling |
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- **Node.js** >= 22.0.0 (LTS recommended)
+- **npm** >= 10.0.0
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/challabhaskarrao/ACM.SRMTRICHY.git
+
+# Navigate to the project directory
+cd ACM.SRMTRICHY
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The app will be available at `http://localhost:3000` 🎉
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
 
 ---
 
 ## 🚀 Live Deployment
 
-The website has been successfully deployed and is live for the world to see! 
+The website has been successfully deployed and is live for the world to see!
 
 **🔗 Visit our live site here:** [https://acm-srmtrichy.vercel.app/](https://acm-srmtrichy.vercel.app/) ✨
 
 ---
 
+## 📂 Project Structure
+
+```
+ACM.SRMTRICHY/
+├── app/                    # Next.js App Router pages
+│   ├── events/             # Events page
+│   ├── gallery/            # Gallery page
+│   ├── globals.css         # Global styles
+│   ├── layout.tsx          # Root layout
+│   └── page.tsx            # Home page
+├── components/             # Reusable UI components
+│   ├── FloatingLogo.tsx    # Animated floating logo
+│   ├── GlassCard.tsx       # Glassmorphism card
+│   ├── JoinModal.tsx       # Join chapter modal
+│   ├── MagicBento.tsx      # Interactive bento grid
+│   ├── Navbar.tsx          # Navigation bar
+│   ├── RotatingText.tsx    # Rotating text animation
+│   ├── SplashScreen.tsx    # Loading splash screen
+│   └── ThreeScene.tsx      # 3D scene component
+├── sections/               # Page sections
+│   ├── About.tsx           # About section
+│   ├── Hero.tsx            # Hero banner
+│   ├── TeamLeadership.tsx  # Team display
+│   └── ...                 # Other sections
+├── public/assets/          # Static assets (images, videos)
+├── next.config.js          # Next.js configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Project metadata & dependencies
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+
+---
+
 ## 📬 Contact Us
 
-Have questions, suggestions, or want to collaborate? 
+Have questions, suggestions, or want to collaborate?
 Feel free to drop us an email at: **[connect@srmtrichy.acm.org](mailto:connect@srmtrichy.acm.org)** ✉️
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 <div align="center">
   <i>Designed and developed with ❤️ by the ACM SRM Trichy Team.</i>
+  <br/><br/>
+  <a href="https://acm-srmtrichy.vercel.app/">
+    <img src="https://img.shields.io/badge/🌐_Visit_Live_Site-06b6d4?style=for-the-badge" alt="Visit Live Site"/>
+  </a>
 </div>
