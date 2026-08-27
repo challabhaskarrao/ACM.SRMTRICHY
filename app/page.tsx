@@ -13,6 +13,7 @@ import ScrollNav from '@/components/ScrollNav';
 import SplashScreen from '@/components/SplashScreen';
 import JoinModal from '@/components/JoinModal';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 
 type ModalStep = 'question' | 'apply' | 'external';
 
@@ -50,6 +51,7 @@ export default function Home() {
             <Contact openJoinModal={openJoinModal} />
           </main>
           <Footer />
+          <BackToTop />
           <JoinModal
             isOpen={joinModalOpen}
             onClose={() => setJoinModalOpen(false)}
