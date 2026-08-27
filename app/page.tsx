@@ -12,6 +12,7 @@ import SmoothScroll from '@/components/SmoothScroll';
 import ScrollNav from '@/components/ScrollNav';
 import SplashScreen from '@/components/SplashScreen';
 import JoinModal from '@/components/JoinModal';
+import Footer from '@/components/Footer';
 
 type ModalStep = 'question' | 'apply' | 'external';
 
@@ -48,6 +49,7 @@ export default function Home() {
             <Collaborations openJoinModal={openApplyDirect} />
             <Contact openJoinModal={openJoinModal} />
           </main>
+          <Footer />
           <JoinModal
             isOpen={joinModalOpen}
             onClose={() => setJoinModalOpen(false)}
